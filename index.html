@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THRPY - Three Free February</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/academy-engraved-let" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      background-color: #131313;
+      font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    /* Background layers */
+    .bg-base {
+      position: fixed;
+      z-index: 0;
+      background-color: #131313;
+      top: -20vh;
+      left: -20vw;
+      right: -20vw;
+      bottom: -20vh;
+      width: 140vw;
+      height: 140vh;
+    }
+
+    .bg-wallpaper {
+      position: fixed;
+      z-index: 1;
+      top: -20vh;
+      left: -20vw;
+      right: -20vw;
+      bottom: -20vh;
+      width: 140vw;
+      height: 140vh;
+    }
+
+    .bg-wallpaper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: overlay;
+      opacity: 0.3;
+    }
+
+    .bg-animations {
+      position: fixed;
+      pointer-events: none;
+      z-index: 1;
+      top: -20vh;
+      left: -20vw;
+      right: -20vw;
+      bottom: -20vh;
+      width: 140vw;
+      height: 140vh;
+      overflow: visible;
+    }
+
+    .bg-hearts-sparkles {
+      position: fixed;
+      pointer-events: none;
+      z-index: 2;
+      top: -20vh;
+      left: -20vw;
+      right: -20vw;
+      bottom: -20vh;
+      width: 140vw;
+      height: 140vh;
+      overflow: visible;
+    }
+
+    /* Logo */
+    .logo-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 4rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    @media (min-width: 768px) {
+      .logo-container {
+        padding-top: 5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .logo-container {
+        padding-top: 6rem;
+      }
+    }
+
+    .logo-container img {
+      height: 3rem;
+      width: auto;
+      opacity: 0.9;
+    }
+
+    @media (min-width: 768px) {
+      .logo-container img {
+        height: 4rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .logo-container img {
+        height: 5rem;
+      }
+    }
+
+    /* Main content */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      text-align: center;
+      max-width: 42rem;
+      position: relative;
+      z-index: 10;
+      flex: 1;
+    }
+
+    h1 {
+      font-size: clamp(5rem, 15vw, 12rem);
+      color: rgba(255, 255, 255, 0.6);
+      font-family: 'Academy Engraved LET', 'Playfair Display', serif;
+      letter-spacing: -0.02em;
+      line-height: 0.9;
+      font-weight: 400;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+      animation: fade-in-slow 2s ease-out;
+    }
+
+    .three-free-feb {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: 2px dotted rgba(255, 255, 255, 0.6);
+      border-radius: 4px;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-top: -0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .three-free-feb {
+        font-size: 1rem;
+      }
+    }
+
+    .promo-text {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.5);
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+      text-decoration: none;
+      margin-top: -0.5rem;
+      display: block;
+      transition: opacity 0.3s;
+    }
+
+    .promo-text:hover {
+      opacity: 0.8;
+    }
+
+    @media (min-width: 768px) {
+      .promo-text {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .promo-text {
+        font-size: 1.5rem;
+      }
+    }
+
+    .date-text {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .date-text {
+        font-size: 1rem;
+      }
+    }
+
+    .icon-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0.75rem;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .icon-container:hover {
+      opacity: 0.9;
+    }
+
+    .icon-container img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 2rem;
+      box-shadow: 0 20px 70px rgba(204, 123, 248, 0.4), 0 0 40px rgba(204, 123, 248, 0.2);
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .icon-container img {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .icon-container img {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+
+    .sneak-peak-link {
+      font-size: 0.75rem;
+      font-weight: 300;
+      margin-top: 0.25rem;
+      display: block;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .sneak-peak-link:hover {
+      opacity: 0.7;
+    }
+
+    /* Animations */
+    @keyframes fade-in-slow {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes blob-float {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      25% {
+        transform: translate(20px, -30px) scale(1.05);
+      }
+      50% {
+        transform: translate(-15px, -20px) scale(0.95);
+      }
+      75% {
+        transform: translate(10px, -40px) scale(1.02);
+      }
+    }
+
+    @keyframes blob-float-flipped {
+      0%, 100% {
+        transform: translate(0, 0) scale(-1, 1);
+      }
+      25% {
+        transform: translate(20px, -30px) scale(-1.05, 1.05);
+      }
+      50% {
+        transform: translate(-15px, -20px) scale(-0.95, 0.95);
+      }
+      75% {
+        transform: translate(10px, -40px) scale(-1.02, 1.02);
+      }
+    }
+
+    @keyframes heart-float {
+      0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0);
+      }
+      20% {
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.25;
+        transform: translateX(20px);
+      }
+      90% {
+        opacity: 0.25;
+        transform: translateY(-80vh) translateX(20px);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100vh) translateX(-20px);
+      }
+    }
+
+    @keyframes star-twist {
+      0%, 100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+      }
+      25% {
+        opacity: 0.3;
+        transform: scale(1) rotate(90deg);
+      }
+      50% {
+        opacity: 0.4;
+        transform: scale(1.2) rotate(180deg);
+      }
+      75% {
+        opacity: 0.3;
+        transform: scale(1) rotate(270deg);
+      }
+    }
+
+    .animate-blob-float {
+      animation: blob-float ease-in-out infinite;
+    }
+
+    .animate-blob-float-flipped {
+      animation: blob-float-flipped ease-in-out infinite;
+    }
+
+    .animate-heart-float {
+      animation: heart-float linear infinite;
+    }
+
+    .animate-star-twist {
+      animation: star-twist ease-in-out infinite;
+    }
+
+    /* Light Mode Support */
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: #f5f5f5;
+      }
+
+      .bg-base {
+        background-color: #f5f5f5;
+      }
+
+      h1 {
+        color: rgba(0, 0, 0, 0.7) !important;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      .promo-text {
+        color: rgba(0, 0, 0, 0.6) !important;
+      }
+
+      .date-text {
+        color: rgba(0, 0, 0, 0.8) !important;
+      }
+
+      .three-free-feb {
+        color: rgba(0, 0, 0, 0.7) !important;
+        border-color: rgba(0, 0, 0, 0.6) !important;
+      }
+
+      .sneak-peak-link {
+        color: rgba(0, 0, 0, 0.5) !important;
+      }
+
+      .logo-container img {
+        filter: brightness(0.7);
+      }
+
+      .bg-wallpaper img {
+        opacity: 0.15;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Base -->
+  <div class="bg-base"></div>
+
+  <!-- Wallpaper Overlay -->
+  <div class="bg-wallpaper">
+    <img src="assets/THRPY_GFX_Wallpaper.svg" alt="">
+  </div>
+
+  <!-- Animated Blobs -->
+  <div class="bg-animations" id="blobs-container"></div>
+
+  <!-- Hearts and Sparkles -->
+  <div class="bg-hearts-sparkles" id="hearts-sparkles-container"></div>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="assets/THRPY.AI-LOGO-final2026.svg" alt="THRPY">
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>LOVE YOURSELF</h1>
+
+    <div class="three-free-feb">THREE FREE FEB</div>
+
+    <a href="https://beta.thrpy.ai/promo" target="_blank" rel="noopener noreferrer" class="promo-text">
+      Three free months await those who dare to begin
+    </a>
+
+    <div class="date-text">February 2026</div>
+
+    <a href="https://beta.thrpy.ai" target="_blank" rel="noopener noreferrer" class="icon-container">
+      <img src="assets/thrpy-promo.png" alt="THRPY Promo App Icon - 3 Month Special Edition">
+    </a>
+
+    <a href="https://beta.thrpy.ai" target="_blank" rel="noopener noreferrer" class="sneak-peak-link">
+      -={ sneak a peak }=-
+    </a>
+  </div>
+
+  <script>
+    // Generate sparkles
+    const sparkles = Array.from({ length: 30 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      delay: Math.random() * 3,
+      duration: 2 + Math.random() * 2,
+      size: 8 + Math.random() * 12,
+    }));
+
+    // Create blob elements
+    const blobsContainer = document.getElementById('blobs-container');
+    
+    // Blurple blob (flipped)
+    const blurpleBlob = document.createElement('div');
+    blurpleBlob.className = 'absolute animate-blob-float-flipped';
+    blurpleBlob.style.cssText = `
+      left: -45vw;
+      top: -45vh;
+      width: 90vw;
+      height: auto;
+      opacity: ${0.15 + Math.random() * 0.2};
+      animation-delay: 0s;
+      animation-duration: 15s;
+    `;
+    blurpleBlob.innerHTML = '<img src="assets/blurple-blob.svg" alt="" style="width: 100%; height: 100%;">';
+    blobsContainer.appendChild(blurpleBlob);
+
+    // Rorange blob
+    const rorangeBlob = document.createElement('div');
+    rorangeBlob.className = 'absolute animate-blob-float';
+    rorangeBlob.style.cssText = `
+      left: 55vw;
+      top: 55vh;
+      width: 90vw;
+      height: auto;
+      opacity: ${0.15 + Math.random() * 0.2};
+      animation-delay: 2s;
+      animation-duration: 18s;
+    `;
+    rorangeBlob.innerHTML = '<img src="assets/rorange-rob.svg" alt="" style="width: 100%; height: 100%;">';
+    blobsContainer.appendChild(rorangeBlob);
+
+    // Create hearts
+    const heartsContainer = document.getElementById('hearts-sparkles-container');
+    
+    for (let i = 0; i < 8; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'absolute animate-heart-float';
+      heart.style.cssText = `
+        left: ${Math.random() * 100}%;
+        bottom: -100px;
+        animation-delay: ${Math.random() * 8}s;
+        animation-duration: ${10 + Math.random() * 4}s;
+        width: ${40 + Math.random() * 40}px;
+        height: auto;
+        opacity: ${0.15 + Math.random() * 0.15};
+      `;
+      heart.innerHTML = '<img src="assets/furple-heart.svg" alt="" style="width: 100%; height: 100%;">';
+      heartsContainer.appendChild(heart);
+    }
+
+    // Create sparkles
+    const starGraphics = ['star1.svg', 'star2.svg', 'star3.svg'];
+    sparkles.forEach((sparkle) => {
+      const starDiv = document.createElement('div');
+      starDiv.className = 'absolute animate-star-twist';
+      const selectedStar = starGraphics[Math.floor(Math.random() * starGraphics.length)];
+      starDiv.style.cssText = `
+        left: ${sparkle.left}%;
+        top: ${sparkle.top}%;
+        width: ${sparkle.size}px;
+        height: ${sparkle.size}px;
+        animation-delay: ${sparkle.delay}s;
+        animation-duration: ${sparkle.duration}s;
+        opacity: ${0.2 + Math.random() * 0.2};
+      `;
+      starDiv.innerHTML = `<img src="assets/${selectedStar}" alt="" style="width: 100%; height: 100%;">`;
+      heartsContainer.appendChild(starDiv);
+    });
+  </script>
+</body>
+</html>
