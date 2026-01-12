@@ -121,3 +121,29 @@
 - More hearts create a more romantic, engaging visual effect
 - Headline now has better size control on large screens
 - Completeness: 100/100
+
+[2026-01-12 15:20:00] More Hearts Starting Sooner
+- Increased hearts from 25 to 50 for even more visual impact
+- Reduced animation delay from 0-8s to 0-3s so hearts start appearing sooner
+- First 15 hearts start at random positions (0-30px from bottom) instead of -100px
+- Remaining hearts start at -100px as before
+- Hearts now appear immediately and continuously throughout the page
+- Creates a more dynamic, romantic atmosphere with hearts visible right away
+- Completeness: 100/100
+
+[2026-01-12 15:25:00] Hearts Last Longer
+- Increased heart animation duration from 10-14 seconds to 25-40 seconds
+- Hearts now stay visible on screen much longer (2-3x longer)
+- Creates a more sustained romantic atmosphere with hearts lingering longer
+- Better visual continuity with hearts visible throughout their journey
+- Completeness: 100/100
+
+[2026-01-12 15:30:00] Added Pre-Coupon Text Above THREE FREE FEB
+- Added "Beta is now LIVE" text above the coupon in small uppercase text
+- Added "love yourself for valentines" text below it in lowercase
+- Created .pre-coupon-text CSS class with responsive sizing (0.625rem mobile, 0.75rem tablet, 0.875rem desktop)
+- Text styled with Manrope font, subtle opacity (0.5), and proper letter spacing
+- Added light mode support for the new text
+- Adjusted margin-top on .three-free-feb from -0.5rem to 0.5rem for proper spacing
+- Text appears above the THREE FREE FEB coupon with appropriate spacing
+- Completeness: 100/100
