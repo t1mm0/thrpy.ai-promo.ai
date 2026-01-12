@@ -147,3 +147,21 @@
 - Adjusted margin-top on .three-free-feb from -0.5rem to 0.5rem for proper spacing
 - Text appears above the THREE FREE FEB coupon with appropriate spacing
 - Completeness: 100/100
+
+[2026-01-12 15:35:00] Scaled Icon Border Radius Responsively
+- Icon border-radius now scales proportionally with icon size
+- Mobile (5rem icon): border-radius 1.25rem (reduced curve)
+- Tablet (7rem icon): border-radius 1.75rem (medium curve)
+- Desktop (8rem icon): border-radius 2rem (full curve)
+- Border-radius scales at 25% of icon size for proportional appearance
+- Creates more consistent visual appearance across screen sizes
+- Completeness: 100/100
+
+[2026-01-12 15:40:00] Reduced Space Below Logo by 50%
+- Reduced padding-bottom on logo container by 50%:
+  * Mobile: 6rem → 3rem
+  * Tablet: 8rem → 4rem
+  * Desktop: 10rem → 5rem
+- Logo now sits closer to the headline/content below
+- Creates tighter, more compact layout
+- Completeness: 100/100
