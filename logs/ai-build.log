@@ -165,3 +165,21 @@
 - Logo now sits closer to the headline/content below
 - Creates tighter, more compact layout
 - Completeness: 100/100
+
+[2026-01-12 15:45:00] General Vertical Spacing Tightening
+- Reduced logo container padding-top: 4rem/5rem/6rem → 2.5rem/3rem/3.5rem (~35-40% reduction)
+- Reduced logo container padding-bottom: 3rem/4rem/5rem → 1.5rem/2rem/2.5rem (~50% reduction)
+- Reduced main content gap: 1rem → 0.75rem (25% reduction)
+- Reduced main content padding-top: 2rem/3rem/4rem → 1rem/1.5rem/2rem (~50% reduction)
+- Reduced main content margin-top: 2rem/3rem/4rem → 1rem/1.5rem/2rem (~50% reduction)
+- Reduced pre-coupon-text margin-bottom: 0.5rem → 0.25rem (50% reduction)
+- Reduced valentines-text margin-top: 0.25rem → 0.15rem (40% reduction)
+- Reduced three-free-feb margin-top: 0.5rem → 0.25rem (50% reduction)
+- Reduced promo-text margin-top: -0.5rem → -0.25rem (50% reduction)
+- Reduced date-text margin-top: 0.5rem → 0.25rem (50% reduction)
+- Reduced icon-container margin-top: 0.75rem → 0.5rem (33% reduction)
+- Reduced icon-container margin-bottom: 0.5rem → 0.25rem (50% reduction)
+- Overall vertical spacing reduced by 30-50% throughout the page
+- Creates much tighter, more compact vertical layout
+- Elements now sit closer together for better visual cohesion
+- Completeness: 100/100
