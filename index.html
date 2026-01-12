@@ -279,44 +279,42 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 2.5rem;
-      padding-bottom: 1.5rem;
-      min-height: 9rem;
+      padding-top: 1.5rem;
+      padding-bottom: 0.75rem;
+      min-height: auto;
       position: relative;
       z-index: 10;
     }
 
     @media (min-width: 768px) {
       .logo-container {
-        padding-top: 3rem;
-        padding-bottom: 2rem;
-        min-height: 12rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
       }
     }
 
     @media (min-width: 1024px) {
       .logo-container {
-        padding-top: 3.5rem;
-        padding-bottom: 2.5rem;
-        min-height: 15rem;
+        padding-top: 2.5rem;
+        padding-bottom: 1.25rem;
       }
     }
 
     .logo-container img {
-      height: 3rem;
+      height: 2.5rem;
       width: auto;
       opacity: 0.9;
     }
 
     @media (min-width: 768px) {
       .logo-container img {
-        height: 4rem;
+        height: 3rem;
       }
     }
 
     @media (min-width: 1024px) {
       .logo-container img {
-        height: 5rem;
+        height: 3.5rem;
       }
     }
 
@@ -325,11 +323,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      padding: 1rem;
-      padding-top: 1rem;
-      margin-top: 1rem;
+      justify-content: space-between;
+      gap: clamp(0.25rem, 2vh, 1rem);
+      padding: 0.5rem 1rem;
+      padding-top: 0.5rem;
+      margin-top: 0;
       text-align: center;
       max-width: 42rem;
       position: relative;
@@ -339,28 +337,32 @@
 
     @media (min-width: 768px) {
       .main-content {
-        padding-top: 1.5rem;
-        margin-top: 1.5rem;
+        padding-top: 0.75rem;
+        margin-top: 0;
+        gap: clamp(0.4rem, 2.5vh, 1.2rem);
       }
     }
 
     @media (min-width: 1024px) {
       .main-content {
-        padding-top: 2rem;
-        margin-top: 2rem;
+        padding-top: 1rem;
+        margin-top: 0;
+        gap: clamp(0.5rem, 3vh, 1.5rem);
       }
     }
 
     h1 {
-      font-size: clamp(5rem, 15vw, 8rem);
+      font-size: clamp(4rem, 12vw, 7rem);
       max-width: 100%;
       color: rgba(255, 255, 255, 0.6);
       font-family: 'Academy Engraved LET', 'Playfair Display', serif;
       letter-spacing: -0.02em;
-      line-height: 0.9;
+      line-height: 0.85;
       font-weight: 400;
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
       animation: fade-in-slow 2s ease-out;
+      margin: 0;
+      flex-shrink: 1;
     }
 
     .pre-coupon-text {
@@ -370,8 +372,10 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       font-weight: 400;
-      margin-bottom: 0.25rem;
-      line-height: 1.6;
+      margin-bottom: 0;
+      margin-top: 0;
+      line-height: 1.4;
+      flex-shrink: 0;
     }
 
     @media (min-width: 768px) {
@@ -388,7 +392,7 @@
 
     .pre-coupon-text .valentines-text {
       display: block;
-      margin-top: 0.15rem;
+      margin-top: 0.1rem;
       font-size: 0.9em;
       text-transform: lowercase;
       letter-spacing: 0.05em;
@@ -404,8 +408,10 @@
       border: 2px dotted rgba(255, 255, 255, 0.6);
       border-radius: 4px;
       display: inline-block;
-      padding: 0.5rem 1rem;
-      margin-top: 0.25rem;
+      padding: 0.4rem 0.875rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-shrink: 0;
     }
 
     @media (min-width: 768px) {
@@ -415,15 +421,17 @@
     }
 
     .promo-text {
-      font-size: 1.125rem;
+      font-size: 1rem;
       color: rgba(255, 255, 255, 0.5);
       font-family: 'Manrope', sans-serif;
       letter-spacing: 0.05em;
-      line-height: 1.8;
+      line-height: 1.5;
       text-decoration: none;
-      margin-top: -0.25rem;
+      margin-top: 0;
+      margin-bottom: 0;
       display: block;
       transition: opacity 0.3s;
+      flex-shrink: 1;
     }
 
     .promo-text:hover {
@@ -442,28 +450,30 @@
 
     @media (min-width: 768px) {
       .promo-text {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
       }
     }
 
     @media (min-width: 1024px) {
       .promo-text {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
 
     .date-text {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       color: rgba(255, 255, 255, 0.8);
       font-family: 'Manrope', sans-serif;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin-top: 0.25rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-shrink: 0;
     }
 
     @media (min-width: 768px) {
       .date-text {
-        font-size: 1rem;
+        font-size: 0.875rem;
       }
     }
 
@@ -471,10 +481,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 0.5rem;
-      margin-bottom: 0.25rem;
+      margin-top: 0;
+      margin-bottom: 0;
       text-decoration: none;
       transition: opacity 0.3s;
+      flex-shrink: 0;
     }
 
     .icon-container:hover {
@@ -492,26 +503,26 @@
     }
 
     .icon-container img {
-      width: 5rem;
-      height: 5rem;
-      border-radius: 1.25rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
       box-shadow: 0 20px 70px rgba(204, 123, 248, 0.4), 0 0 40px rgba(204, 123, 248, 0.2);
       cursor: pointer;
     }
 
     @media (min-width: 768px) {
       .icon-container img {
-        width: 7rem;
-        height: 7rem;
-        border-radius: 1.75rem;
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 1.375rem;
       }
     }
 
     @media (min-width: 1024px) {
       .icon-container img {
-        width: 8rem;
-        height: 8rem;
-        border-radius: 2rem;
+        width: 6.5rem;
+        height: 6.5rem;
+        border-radius: 1.625rem;
       }
     }
 
@@ -1256,16 +1267,16 @@
         size: 8 + Math.random() * 12,
       }));
     
-      // Create hearts - increased quantity, start sooner, and last longer for more visual impact
+      // Create hearts - increased quantity, start immediately, and last longer for more visual impact
     for (let i = 0; i < 50; i++) {
       const heart = document.createElement('div');
       heart.className = 'absolute animate-heart-float';
-      // Start some hearts at different vertical positions so they appear sooner
-      const startPosition = i < 15 ? Math.random() * 30 : -100;
+      // Start hearts at different vertical positions so they appear immediately
+      const startPosition = i < 20 ? Math.random() * 50 : -100;
       heart.style.cssText = `
         left: ${Math.random() * 100}%;
         bottom: ${startPosition}px;
-        animation-delay: ${Math.random() * 3}s;
+        animation-delay: ${Math.random() * 0.3}s;
         animation-duration: ${25 + Math.random() * 15}s;
         width: ${30 + Math.random() * 50}px;
         height: auto;
