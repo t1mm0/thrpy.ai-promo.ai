@@ -262,3 +262,14 @@
 - Links to beta.thrpy.ai are now external buttons, not routed as part of our site
 - DNS prefetch/preconnect and structured data still only reference thrpy.ai
 - Completeness: 100/100
+
+[2026-01-12 16:20:00] Replaced All PNG References with SVG
+- Replaced all 22 references to thrpy-promo.png with thrpy-promo.svg
+- Updated Open Graph meta tags (og:image, og:image:secure_url)
+- Updated Twitter Card meta tag (twitter:image)
+- Updated all favicon and apple-touch-icon links (changed type from image/png to image/svg+xml)
+- Updated preload link (changed type from image/png to image/svg+xml)
+- Updated all structured data (JSON-LD) image references
+- Updated HTML img src from PNG to SVG
+- All image references now use SVG format for better scalability
+- Completeness: 100/100
