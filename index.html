@@ -16,7 +16,7 @@
   <!-- Primary SEO Meta Tags -->
   <title>THRPY AI - AI Therapist | Online Therapy & Mental Health Support | Free February 2026</title>
   <meta name="title" content="THRPY AI - AI Therapist | Online Therapy & Mental Health Support | Free February 2026">
-  <meta name="description" content="THRPY AI is your personal AI therapist providing accessible, confidential mental health support 24/7. Get three free months this February. Professional AI-powered therapy for anxiety, depression, stress, PTSD, relationship issues, and emotional wellness. Evidence-based CBT and mindfulness techniques.">
+  <meta name="description" content="THRPY AI is your personal AI therapist providing accessible, confidential mental health support 24/7. Get 1 month free when you sign up for any paid service tier. Early Adopter Bonus: Three free months of premium services this February. Professional AI-powered therapy for anxiety, depression, stress, PTSD, relationship issues, and emotional wellness. Evidence-based CBT and mindfulness techniques.">
   <meta name="keywords" content="AI therapist, online therapy, mental health AI, AI counseling, virtual therapist, AI therapy app, mental health support, online counseling, AI mental health, therapy chatbot, digital therapy, AI wellness, mental health chatbot, AI therapist app, online mental health, AI therapy platform, cognitive behavioral therapy AI, AI psychotherapy, mental health technology, AI emotional support, anxiety therapy, depression therapy, stress management, PTSD treatment, online CBT, virtual counseling, telehealth therapy, AI wellness coach, mental health app, therapy online, affordable therapy, 24/7 therapy, confidential therapy">
   <meta name="author" content="THRPY AI">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, archive">
@@ -68,7 +68,7 @@
   <meta name="twitter:creator" content="@thrpyai">
   <meta name="twitter:url" content="https://thrpy.ai/">
   <meta name="twitter:title" content="THRPY AI - AI Therapist | Online Therapy & Mental Health Support">
-  <meta name="twitter:description" content="Get three free months of AI-powered therapy this February. Professional, confidential mental health support available 24/7. Love yourself with THRPY AI.">
+  <meta name="twitter:description" content="Get 1 month free when you sign up for any paid service tier. Early Adopter Bonus: Three free months of premium services this February. Professional, confidential mental health support available 24/7. Love yourself with THRPY AI.">
   <meta name="twitter:image" content="https://thrpy.ai/assets/thrpy-promo.svg">
   <meta name="twitter:image:alt" content="THRPY AI - AI Therapist App - Three Free Months February Promotion">
   <meta name="twitter:domain" content="thrpy.ai">
@@ -280,7 +280,7 @@
       justify-content: center;
       align-items: center;
       padding-top: 1.5rem;
-      padding-bottom: 0.75rem;
+      padding-bottom: 1.5rem;
       min-height: auto;
       position: relative;
       z-index: 10;
@@ -289,14 +289,14 @@
     @media (min-width: 768px) {
       .logo-container {
         padding-top: 2rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
       }
     }
 
     @media (min-width: 1024px) {
       .logo-container {
         padding-top: 2.5rem;
-        padding-bottom: 1.25rem;
+        padding-bottom: 2.5rem;
       }
     }
 
@@ -398,6 +398,64 @@
       letter-spacing: 0.05em;
     }
 
+    .limited-time-text {
+      font-size: 0.625rem;
+      color: rgba(255, 20, 147, 0.8);
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) {
+      .limited-time-text {
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .limited-time-text {
+        font-size: 0.875rem;
+      }
+    }
+
+    [data-theme="light"] .limited-time-text {
+      color: rgba(255, 20, 147, 0.9);
+    }
+
+    .for-valentines-text {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      color: rgba(255, 255, 255, 0.7);
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+      font-weight: 400;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) {
+      .for-valentines-text {
+        font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .for-valentines-text {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+      }
+    }
+
+    [data-theme="light"] .for-valentines-text {
+      color: rgba(0, 0, 0, 0.7);
+    }
+
     .three-free-feb {
       font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.6);
@@ -412,6 +470,15 @@
       margin-top: 0;
       margin-bottom: 0;
       flex-shrink: 0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .three-free-feb:hover {
+      background-color: rgba(255, 20, 147, 0.3);
+      color: rgba(255, 20, 147, 1);
+      border-color: rgba(255, 20, 147, 0.8);
+      box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
     }
 
     @media (min-width: 768px) {
@@ -481,6 +548,18 @@
       flex-shrink: 0;
     }
 
+    .date-text .deadline {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.9em;
+      color: rgba(255, 20, 147, 0.9);
+      font-weight: 600;
+    }
+
+    [data-theme="light"] .date-text .deadline {
+      color: rgba(255, 20, 147, 1);
+    }
+
     @media (min-width: 768px) {
       .date-text {
         font-size: 0.875rem;
@@ -518,6 +597,12 @@
       border-radius: 1rem;
       box-shadow: 0 20px 70px rgba(204, 123, 248, 0.4), 0 0 40px rgba(204, 123, 248, 0.2);
       cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .icon-container:hover img {
+      transform: scale(1.15);
+      box-shadow: 0 25px 80px rgba(204, 123, 248, 0.5), 0 0 50px rgba(204, 123, 248, 0.3);
     }
 
     @media (min-width: 768px) {
@@ -638,6 +723,32 @@
       }
     }
 
+    @keyframes heart-float-left {
+      0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0);
+      }
+      20% {
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.25;
+        transform: translateX(-20px);
+      }
+      90% {
+        opacity: 0.25;
+        transform: translateY(-80vh) translateX(-20px);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100vh) translateX(20px);
+      }
+    }
+
+    .animate-heart-float-left {
+      animation: heart-float-left linear infinite;
+    }
+
     @keyframes star-twist {
       0%, 100% {
         opacity: 0;
@@ -692,8 +803,8 @@
     }
 
     [data-theme="light"] .promo-text:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-      color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(255, 192, 203, 0.3);
+      color: rgba(0, 0, 0, 0.9);
     }
 
     [data-theme="light"] .date-text {
@@ -707,6 +818,13 @@
     [data-theme="light"] .three-free-feb {
       color: rgba(0, 0, 0, 0.7);
       border-color: rgba(0, 0, 0, 0.6);
+    }
+
+    [data-theme="light"] .three-free-feb:hover {
+      background-color: rgba(255, 20, 147, 0.25);
+      color: rgba(255, 20, 147, 1);
+      border-color: rgba(255, 20, 147, 0.8);
+      box-shadow: 0 0 20px rgba(255, 20, 147, 0.4);
     }
 
     [data-theme="light"] .sneak-peak-link {
@@ -852,13 +970,13 @@
     },
     "offers": {
       "@type": "Offer",
-      "name": "Three Free Months - February Promotion",
-      "description": "Get three free months of AI therapy this February. Professional, confidential mental health support available 24/7.",
+      "name": "1 Month Free + Early Adopter Bonus - February Promotion",
+      "description": "Get 1 month free when you sign up for any paid service tier. Early Adopter Bonus: Three free months of premium services this February. Professional, confidential mental health support available 24/7.",
       "availabilityStarts": "2026-02-01T00:00:00-00:00",
-      "availabilityEnds": "2026-02-28T23:59:59-00:00",
+      "availabilityEnds": "2026-02-29T23:59:59-00:00",
       "price": "0",
       "priceCurrency": "USD",
-      "priceValidUntil": "2026-02-28",
+      "priceValidUntil": "2026-02-29",
       "url": "https://thrpy.ai",
       "category": "Mental Health Services",
       "eligibleRegion": {
@@ -885,7 +1003,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "THRPY AI - AI Therapist | Online Therapy & Mental Health Support | Free February 2026",
-    "description": "Get three free months of AI-powered therapy this February. Professional, confidential mental health support available 24/7. Love yourself with THRPY AI. Evidence-based therapy for anxiety, depression, stress, PTSD, and emotional wellness.",
+    "description": "Get 1 month free when you sign up for any paid service tier. Early Adopter Bonus: Three free months of premium services this February. Professional, confidential mental health support available 24/7. Love yourself with THRPY AI. Evidence-based therapy for anxiety, depression, stress, PTSD, and emotional wellness.",
     "url": "https://thrpy.ai/",
     "inLanguage": "en-US",
     "isPartOf": {
@@ -952,9 +1070,9 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "description": "Three free months promotion - February 2026",
+      "description": "1 month free when you sign up for any paid service tier. Early Adopter Bonus: Three free months of premium services - February 2026",
       "availabilityStarts": "2026-02-01",
-      "availabilityEnds": "2026-02-28",
+      "availabilityEnds": "2026-02-29",
       "url": "https://thrpy.ai"
     },
     "aggregateRating": {
@@ -977,7 +1095,7 @@
     ],
     "screenshot": "https://thrpy.ai/assets/thrpy-promo.svg",
     "softwareVersion": "1.0",
-    "releaseNotes": "Three Free February promotion - Get three free months of AI therapy",
+    "releaseNotes": "1 Month Free + Early Adopter Bonus: Three free months of premium services - February 2026",
     "url": "https://thrpy.ai",
     "downloadUrl": "https://thrpy.ai"
   }
@@ -1022,10 +1140,10 @@
       },
       {
         "@type": "Question",
-        "name": "How do I get three free months?",
+        "name": "How do I get the free months?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "During February 2026, new users can get three free months of THRPY AI therapy. Simply visit thrpy.ai to claim your free months and start your mental health journey."
+          "text": "During February 2026, sign up for any paid service tier and get 1 month free. Early Adopter Bonus: Get three free months of premium services. Simply visit thrpy.ai to claim your offer and start your mental health journey."
         }
       },
       {
@@ -1073,7 +1191,7 @@
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "url": "https://thrpy.ai",
-      "priceValidUntil": "2026-02-28",
+      "priceValidUntil": "2026-02-29",
       "availabilityStarts": "2026-02-01",
       "availabilityEnds": "2026-02-28"
     },
@@ -1119,18 +1237,25 @@
   <main id="main-content" class="main-content" role="main" itemscope itemtype="https://schema.org/WebPage">
     <h1 itemprop="headline">LOVE YOURSELF</h1>
 
+    <div class="for-valentines-text">for valentines</div>
+
     <div class="pre-coupon-text">
       Beta is now LIVE
       <span class="valentines-text">love yourself for valentines</span>
     </div>
 
-    <div class="three-free-feb" aria-label="Three Free February Promotion" role="banner">THREE FREE FEB</div>
+    <div class="limited-time-text">LIMITED TIME ONLY - SITE LAUNCH SPECIAL DEAL</div>
 
-    <a href="https://beta.thrpy.ai/promo" target="_blank" rel="external noopener noreferrer" class="promo-text" aria-label="Get three free months of AI therapy - February 2026 promotion" itemprop="mainEntity">
-      Three free months await those who dare to begin
+    <div class="three-free-feb" aria-label="Early Adopter Bonus - Three Free Months Premium" role="banner">EARLY ADOPTER BONUS</div>
+
+    <a href="https://beta.thrpy.ai/promo" target="_blank" rel="external noopener noreferrer" class="promo-text" aria-label="1 Month Free + Early Adopter Bonus - February 2026 promotion" itemprop="mainEntity">
+      1 MONTH FREE when you sign up for any paid service tier. EARLY ADOPTER BONUS: THREE FREE MONTHS OF PREMIUM SERVICES.
     </a>
 
-    <time class="date-text" datetime="2026-02" itemprop="datePublished">February 2026</time>
+    <time class="date-text" datetime="2026-02-29T23:59:59" itemprop="datePublished">
+      February 2026
+      <span class="deadline">Deal finishes on Feb 29th, 2026 midnight</span>
+    </time>
 
     <a href="https://beta.thrpy.ai" target="_blank" rel="external noopener noreferrer" class="icon-container" aria-label="Visit THRPY AI Beta - Start your mental health journey">
       <span class="sr-only">Visit THRPY AI Beta - Access AI therapy and mental health support</span>
@@ -1146,7 +1271,7 @@
   <div class="sr-only" aria-hidden="true">
     <h1>THRPY AI - Professional AI Therapist and Mental Health Support Platform</h1>
     <h2>AI Therapist Services - 24/7 Online Therapy</h2>
-    <p>THRPY AI provides professional AI-powered therapy and mental health counseling services. Our AI therapist offers 24/7 support for anxiety, depression, stress management, PTSD, emotional wellness, and mental health challenges. Access confidential online therapy sessions anytime, anywhere. Get three free months this February 2026.</p>
+    <p>THRPY AI provides professional AI-powered therapy and mental health counseling services. Our AI therapist offers 24/7 support for anxiety, depression, stress management, PTSD, emotional wellness, and mental health challenges. Access confidential online therapy sessions anytime, anywhere. Get 1 month free when you sign up for any paid service tier. Early Adopter Bonus: Three free months of premium services this February 2026.</p>
     
     <h2>Mental Health Support Services</h2>
     <p>Get personalized mental health support with our advanced AI therapy platform. Professional counseling services available for anxiety disorders, depression, stress, PTSD, relationship issues, emotional wellness, and more. Evidence-based cognitive behavioral therapy (CBT) and mindfulness techniques.</p>
@@ -1172,8 +1297,8 @@
     <h2>Virtual Counseling and Digital Therapy</h2>
     <p>Experience the future of mental health care with virtual counseling and digital therapy from THRPY AI. Our AI therapy app provides convenient, accessible, and effective mental health support. No need to leave your home - access professional therapy from anywhere.</p>
     
-    <h2>Three Free Months Promotion - February 2026</h2>
-    <p>Special promotion: Get three free months of AI therapy this February 2026. New users can access professional mental health support at no cost. Visit thrpy.ai to claim your free months and begin your mental health journey with THRPY AI.</p>
+    <h2>1 Month Free + Early Adopter Bonus - February 2026</h2>
+    <p>Special promotion: Get 1 month free when you sign up for any paid service tier this February 2026. Early Adopter Bonus: Three free months of premium services. Sign up for any paid tier and receive both offers. Visit thrpy.ai to claim your free months and begin your mental health journey with THRPY AI.</p>
     
     <h2>Mental Health Technology and AI Wellness</h2>
     <p>THRPY AI represents the cutting edge of mental health technology and AI wellness. Our platform combines advanced artificial intelligence with proven therapeutic methods to deliver effective, accessible mental health care. Experience the benefits of AI-powered therapy.</p>
@@ -1278,19 +1403,22 @@
         top: Math.random() * 100,
         delay: Math.random() * 3,
         duration: 2 + Math.random() * 2,
-        size: 8 + Math.random() * 12,
+        size: 20 + Math.random() * 30,
+        hasFlash: Math.random() > 0.7,
       }));
     
-      // Create hearts - increased quantity, start immediately, and last longer for more visual impact
-    for (let i = 0; i < 50; i++) {
+      // Create hearts - increased quantity, start immediately, randomly swap left/right, and last longer
+    for (let i = 0; i < 75; i++) {
       const heart = document.createElement('div');
-      heart.className = 'absolute animate-heart-float';
-      // Start hearts at different vertical positions so they appear immediately
-      const startPosition = i < 20 ? Math.random() * 50 : -100;
+      // Randomly choose left or right floating animation
+      const floatDirection = Math.random() > 0.5 ? 'animate-heart-float' : 'animate-heart-float-left';
+      heart.className = `absolute ${floatDirection}`;
+      // Start more hearts at visible positions immediately
+      const startPosition = i < 35 ? Math.random() * 80 : -100;
       heart.style.cssText = `
         left: ${Math.random() * 100}%;
         bottom: ${startPosition}px;
-        animation-delay: ${Math.random() * 0.3}s;
+        animation-delay: ${Math.random() * 0.2}s;
         animation-duration: ${25 + Math.random() * 15}s;
         width: ${30 + Math.random() * 50}px;
         height: auto;
@@ -1300,11 +1428,13 @@
       heartsContainer.appendChild(heart);
     }
 
-    // Create sparkles
+    // Create sparkles - bigger with occasional camera flash effect
     const starGraphics = ['star1.svg', 'star2.svg', 'star3.svg'];
     sparkles.forEach((sparkle) => {
       const starDiv = document.createElement('div');
-      starDiv.className = 'absolute animate-star-twist';
+      // Add camera flash animation to some sparkles
+      const animationClass = sparkle.hasFlash ? 'animate-star-twist animate-camera-flash' : 'animate-star-twist';
+      starDiv.className = `absolute ${animationClass}`;
       const selectedStar = starGraphics[Math.floor(Math.random() * starGraphics.length)];
       starDiv.style.cssText = `
         left: ${sparkle.left}%;
