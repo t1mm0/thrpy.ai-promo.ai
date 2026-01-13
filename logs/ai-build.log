@@ -396,3 +396,20 @@
 - Text is lowercase with proper letter spacing
 - Creates visually appealing interactive heart button
 - Completeness: 100/100
+
+[2026-01-12 17:15:00] Reduced Sparkle Size
+- Reduced sparkle size from 20-50px to 10-25px (50% reduction)
+- Sparkles now more subtle and less overwhelming
+- Maintains visual interest while being less distracting
+- Completeness: 100/100
+
+[2026-01-12 17:20:00] Add Theme Parameter to Links
+- Added JavaScript to append theme parameter to all beta.thrpy.ai links
+- Links now include ?theme=light or ?theme=dark query parameter based on current theme
+- Theme parameter is added/updated:
+  * On page load (based on current theme)
+  * When theme changes (via MutationObserver)
+- Uses URL API to properly handle query parameters
+- All external beta.thrpy.ai links now pass theme preference
+- Allows beta site to respect user's theme preference
+- Completeness: 100/100

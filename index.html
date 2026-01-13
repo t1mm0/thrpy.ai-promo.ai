@@ -1512,6 +1512,55 @@
       });
     })();
 
+    // Add theme parameter to beta.thrpy.ai links
+    (function() {
+      'use strict';
+      
+      function getCurrentTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'dark';
+      }
+      
+      function addThemeToLink(url) {
+        if (!url || !url.includes('beta.thrpy.ai')) {
+          return url;
+        }
+        
+        // Remove existing theme parameter if present
+        const urlObj = new URL(url);
+        urlObj.searchParams.set('theme', getCurrentTheme());
+        return urlObj.toString();
+      }
+      
+      function updateBetaLinks() {
+        const links = document.querySelectorAll('a[href*="beta.thrpy.ai"]');
+        links.forEach(function(link) {
+          const originalHref = link.getAttribute('href');
+          if (originalHref) {
+            const newHref = addThemeToLink(originalHref);
+            link.setAttribute('href', newHref);
+          }
+        });
+      }
+      
+      // Update links on page load
+      updateBetaLinks();
+      
+      // Update links when theme changes
+      const html = document.documentElement;
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+            updateBetaLinks();
+          }
+        });
+      });
+      
+      observer.observe(html, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+      });
+    })();
+
     // Generate sparkles
     (function() {
       'use strict';
@@ -1560,7 +1609,7 @@
         top: Math.random() * 100,
         delay: Math.random() * 3,
         duration: 2 + Math.random() * 2,
-        size: 20 + Math.random() * 30,
+        size: 10 + Math.random() * 15,
         hasFlash: Math.random() > 0.7,
       }));
     
