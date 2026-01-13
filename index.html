@@ -279,8 +279,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 0.75rem;
       min-height: auto;
       position: relative;
       z-index: 10;
@@ -288,33 +288,33 @@
 
     @media (min-width: 768px) {
       .logo-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1rem;
       }
     }
 
     @media (min-width: 1024px) {
       .logo-container {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.25rem;
       }
     }
 
     .logo-container img {
-      height: 2.5rem;
+      height: 2rem;
       width: auto;
       opacity: 0.9;
     }
 
     @media (min-width: 768px) {
       .logo-container img {
-        height: 3rem;
+        height: 2.5rem;
       }
     }
 
     @media (min-width: 1024px) {
       .logo-container img {
-        height: 3.5rem;
+        height: 3rem;
       }
     }
 
@@ -324,9 +324,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      gap: clamp(0.25rem, 2vh, 1rem);
-      padding: 0.5rem 1rem;
-      padding-top: 0.5rem;
+      gap: clamp(0.2rem, 1.5vh, 0.75rem);
+      padding: 0.25rem 1rem;
+      padding-top: 0.25rem;
       margin-top: 0;
       text-align: center;
       max-width: 42rem;
@@ -337,27 +337,27 @@
 
     @media (min-width: 768px) {
       .main-content {
-        padding-top: 0.75rem;
+        padding-top: 0.5rem;
         margin-top: 0;
-        gap: clamp(0.4rem, 2.5vh, 1.2rem);
+        gap: clamp(0.3rem, 2vh, 0.9rem);
       }
     }
 
     @media (min-width: 1024px) {
       .main-content {
-        padding-top: 1rem;
+        padding-top: 0.75rem;
         margin-top: 0;
-        gap: clamp(0.5rem, 3vh, 1.5rem);
+        gap: clamp(0.4rem, 2.5vh, 1rem);
       }
     }
 
     h1 {
-      font-size: clamp(4rem, 12vw, 7rem);
+      font-size: clamp(3.5rem, 10vw, 6rem);
       max-width: 100%;
       color: rgba(255, 255, 255, 0.6);
       font-family: 'Academy Engraved LET', 'Playfair Display', serif;
       letter-spacing: -0.02em;
-      line-height: 0.85;
+      line-height: 0.8;
       font-weight: 400;
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
       animation: fade-in-slow 2s ease-out;
@@ -405,9 +405,9 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
-      margin-top: 0.5rem;
-      margin-bottom: 0.25rem;
-      line-height: 1.4;
+      margin-top: 0.25rem;
+      margin-bottom: 0.15rem;
+      line-height: 1.3;
       flex-shrink: 0;
     }
 
@@ -427,28 +427,152 @@
       color: rgba(255, 20, 147, 0.9);
     }
 
+    /* Expandable Section */
+    .expandable-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .expand-toggle {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin: 0.25rem 0;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    .expand-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    .expand-toggle .heart-icon {
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.3));
+    }
+
+    .expand-toggle:hover .heart-icon {
+      opacity: 1;
+      filter: drop-shadow(0 0 15px rgba(255, 20, 147, 0.6));
+    }
+
+    .expand-toggle.expanded .heart-icon {
+      transform: rotate(180deg);
+    }
+
+    .expand-toggle .eatme-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Manrope', sans-serif;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: lowercase;
+      letter-spacing: 0.1em;
+      pointer-events: none;
+      z-index: 1;
+      text-shadow: 0 0 8px rgba(255, 20, 147, 0.8), 0 0 4px rgba(255, 20, 147, 0.6);
+    }
+
+    .expand-toggle:hover .eatme-text {
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 0 0 12px rgba(255, 20, 147, 1), 0 0 6px rgba(255, 20, 147, 0.8);
+    }
+
+    @media (min-width: 768px) {
+      .expand-toggle {
+        width: 100px;
+        height: 100px;
+      }
+      .expand-toggle .eatme-text {
+        font-size: 0.875rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .expand-toggle {
+        width: 120px;
+        height: 120px;
+      }
+      .expand-toggle .eatme-text {
+        font-size: 1rem;
+      }
+    }
+
+    [data-theme="light"] .expand-toggle {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    [data-theme="light"] .expand-toggle:hover {
+      color: rgba(255, 20, 147, 0.9);
+    }
+
+    .expandable-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+      opacity: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(0.2rem, 1.5vh, 0.75rem);
+    }
+
+    .expandable-content.expanded {
+      max-height: 1000px;
+      opacity: 1;
+    }
+
+    @media (min-width: 768px) {
+      .expandable-content.expanded {
+        max-height: 1200px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .expandable-content.expanded {
+        max-height: 1500px;
+      }
+    }
+
     .for-valentines-text {
-      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-size: clamp(0.875rem, 2.5vw, 1.25rem);
       color: rgba(255, 255, 255, 0.7);
       font-family: 'Manrope', sans-serif;
       letter-spacing: 0.1em;
       text-transform: lowercase;
       font-weight: 400;
-      margin-top: 0.5rem;
+      margin-top: 0.25rem;
       margin-bottom: 0;
-      line-height: 1.4;
+      line-height: 1.3;
       flex-shrink: 0;
     }
 
     @media (min-width: 768px) {
       .for-valentines-text {
-        font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+        font-size: clamp(1rem, 3vw, 1.5rem);
       }
     }
 
     @media (min-width: 1024px) {
       .for-valentines-text {
-        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-size: clamp(1.125rem, 3.5vw, 1.75rem);
       }
     }
 
@@ -466,7 +590,7 @@
       border: 2px dotted rgba(255, 255, 255, 0.6);
       border-radius: 4px;
       display: inline-block;
-      padding: 0.4rem 0.875rem;
+      padding: 0.3rem 0.75rem;
       margin-top: 0;
       margin-bottom: 0;
       flex-shrink: 0;
@@ -488,16 +612,16 @@
     }
 
     .promo-text {
-      font-size: 1rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.5);
       font-family: 'Manrope', sans-serif;
       letter-spacing: 0.05em;
-      line-height: 1.5;
+      line-height: 1.4;
       text-decoration: none;
       margin-top: 0;
       margin-bottom: 0;
       display: inline-block;
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 0.875rem;
       border-radius: 0.5rem;
       transition: all 0.3s;
       flex-shrink: 1;
@@ -527,13 +651,13 @@
 
     @media (min-width: 768px) {
       .promo-text {
-        font-size: 1.125rem;
+        font-size: 1rem;
       }
     }
 
     @media (min-width: 1024px) {
       .promo-text {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
       }
     }
 
@@ -550,8 +674,8 @@
 
     .date-text .deadline {
       display: block;
-      margin-top: 0.25rem;
-      font-size: 0.9em;
+      margin-top: 0.15rem;
+      font-size: 0.85em;
       color: rgba(255, 20, 147, 0.9);
       font-weight: 600;
     }
@@ -592,9 +716,9 @@
     }
 
     .icon-container img {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 1rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 0.875rem;
       box-shadow: 0 20px 70px rgba(204, 123, 248, 0.4), 0 0 40px rgba(204, 123, 248, 0.2);
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -607,24 +731,24 @@
 
     @media (min-width: 768px) {
       .icon-container img {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 1.125rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .icon-container img {
         width: 5.5rem;
         height: 5.5rem;
         border-radius: 1.375rem;
       }
     }
 
-    @media (min-width: 1024px) {
-      .icon-container img {
-        width: 6.5rem;
-        height: 6.5rem;
-        border-radius: 1.625rem;
-      }
-    }
-
     .sneak-peak-link {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 300;
-      margin-top: 0.25rem;
+      margin-top: 0.15rem;
       display: block;
       color: rgba(255, 255, 255, 0.4);
       font-family: 'Manrope', sans-serif;
@@ -1244,18 +1368,27 @@
       <span class="valentines-text">love yourself for valentines</span>
     </div>
 
-    <div class="limited-time-text">LIMITED TIME ONLY - SITE LAUNCH SPECIAL DEAL</div>
+    <div class="expandable-section">
+      <button class="expand-toggle" id="expandToggle" aria-expanded="false" aria-label="Expand deal details">
+        <img src="assets/furple-heart.svg" alt="" class="heart-icon" aria-hidden="true">
+        <span class="eatme-text">eat me</span>
+      </button>
+      
+      <div class="expandable-content" id="expandableContent">
+        <div class="limited-time-text">LIMITED TIME ONLY - SITE LAUNCH SPECIAL DEAL</div>
 
-    <div class="three-free-feb" aria-label="Early Adopter Bonus - Three Free Months Premium" role="banner">EARLY ADOPTER BONUS</div>
+        <div class="three-free-feb" aria-label="Early Adopter Bonus - Three Free Months Premium" role="banner">EARLY ADOPTER BONUS</div>
 
-    <a href="https://beta.thrpy.ai/promo" target="_blank" rel="external noopener noreferrer" class="promo-text" aria-label="1 Month Free + Early Adopter Bonus - February 2026 promotion" itemprop="mainEntity">
-      1 MONTH FREE when you sign up for any paid service tier. EARLY ADOPTER BONUS: THREE FREE MONTHS OF PREMIUM SERVICES.
-    </a>
+        <a href="https://beta.thrpy.ai/promo" target="_blank" rel="external noopener noreferrer" class="promo-text" aria-label="1 Month Free + Early Adopter Bonus - February 2026 promotion" itemprop="mainEntity">
+          1 MONTH FREE when you sign up for any paid service tier. EARLY ADOPTER BONUS: THREE FREE MONTHS OF PREMIUM SERVICES.
+        </a>
 
-    <time class="date-text" datetime="2026-02-29T23:59:59" itemprop="datePublished">
-      February 2026
-      <span class="deadline">Deal finishes on Feb 29th, 2026 midnight</span>
-    </time>
+        <time class="date-text" datetime="2026-02-29T23:59:59" itemprop="datePublished">
+          February 2026
+          <span class="deadline">Deal finishes on Feb 29th, 2026 midnight</span>
+        </time>
+      </div>
+    </div>
 
     <a href="https://beta.thrpy.ai" target="_blank" rel="external noopener noreferrer" class="icon-container" aria-label="Visit THRPY AI Beta - Start your mental health journey">
       <span class="sr-only">Visit THRPY AI Beta - Access AI therapy and mental health support</span>
@@ -1310,6 +1443,30 @@
   </div>
 
   <script>
+    // Expandable Section Toggle
+    (function() {
+      'use strict';
+      
+      const expandToggle = document.getElementById('expandToggle');
+      const expandableContent = document.getElementById('expandableContent');
+      
+      if (expandToggle && expandableContent) {
+        expandToggle.addEventListener('click', function() {
+          const isExpanded = expandableContent.classList.contains('expanded');
+          
+          if (isExpanded) {
+            expandableContent.classList.remove('expanded');
+            expandToggle.classList.remove('expanded');
+            expandToggle.setAttribute('aria-expanded', 'false');
+          } else {
+            expandableContent.classList.add('expanded');
+            expandToggle.classList.add('expanded');
+            expandToggle.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+    })();
+
     // Theme Toggle Functionality
     (function() {
       'use strict';

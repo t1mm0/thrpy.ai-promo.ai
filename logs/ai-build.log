@@ -349,3 +349,50 @@
 - Creates urgency with clear deadline messaging
 - Hot pink color matches Valentine's theme
 - Completeness: 100/100
+
+[2026-01-12 17:00:00] Consolidated Layout to Fit on One Page
+- Reduced logo container padding: 1.5rem/2rem/2.5rem → 1rem/1.25rem/1.5rem top, 1.5rem/2rem/2.5rem → 0.75rem/1rem/1.25rem bottom
+- Reduced logo size: 2.5rem/3rem/3.5rem → 2rem/2.5rem/3rem
+- Reduced main content gap: clamp(0.25rem, 2vh, 1rem) → clamp(0.2rem, 1.5vh, 0.75rem)
+- Reduced main content padding: 0.5rem → 0.25rem
+- Reduced h1 font size: clamp(4rem, 12vw, 7rem) → clamp(3.5rem, 10vw, 6rem)
+- Reduced h1 line-height: 0.85 → 0.8
+- Reduced for-valentines-text size: clamp(1rem, 3vw, 1.5rem) → clamp(0.875rem, 2.5vw, 1.25rem)
+- Reduced for-valentines-text margin-top: 0.5rem → 0.25rem
+- Reduced limited-time-text margins: 0.5rem/0.25rem → 0.25rem/0.15rem
+- Reduced three-free-feb padding: 0.4rem 0.875rem → 0.3rem 0.75rem
+- Reduced promo-text font size: 1rem/1.125rem/1.25rem → 0.875rem/1rem/1.125rem
+- Reduced promo-text padding: 0.5rem 1rem → 0.4rem 0.875rem
+- Reduced promo-text line-height: 1.5 → 1.4
+- Reduced date-text deadline margin-top: 0.25rem → 0.15rem
+- Reduced date-text deadline font-size: 0.9em → 0.85em
+- Reduced icon size: 4rem/5.5rem/6.5rem → 3.5rem/4.5rem/5.5rem
+- Reduced sneak-peak-link font-size: 0.75rem → 0.7rem
+- Reduced sneak-peak-link margin-top: 0.25rem → 0.15rem
+- All elements now more compact to fit within single viewport
+- Maintains readability while maximizing space efficiency
+- Completeness: 100/100
+
+[2026-01-12 17:05:00] Added Expandable Section for Deal Details
+- Created expandable section that hides content from "LIMITED TIME ONLY" down to "deal finishes"
+- Added heart button with "eatme" text to toggle expand/collapse
+- Content hidden by default (max-height: 0, opacity: 0)
+- Smooth expand/collapse animation (0.4s ease-out)
+- Heart icon rotates 180deg when expanded
+- Button has hover effects with hot pink color and scale transform
+- Added ARIA attributes for accessibility (aria-expanded, aria-label)
+- JavaScript handles toggle functionality
+- All deal details now hidden in collapsible section for cleaner initial view
+- Completeness: 100/100
+
+[2026-01-12 17:10:00] Updated Expand Toggle to Use Furple-Heart Graphic with Text
+- Updated expand toggle to use furple-heart.svg graphic as the main element
+- Positioned "eat me" text absolutely centered on top of the heart graphic
+- Heart graphic sized at 80px/100px/120px (responsive)
+- Text styled with white color and hot pink text-shadow glow effect
+- Added drop-shadow filter to heart for depth
+- Enhanced hover effects: heart glows brighter, text becomes more prominent
+- Heart rotates 180deg when expanded
+- Text is lowercase with proper letter spacing
+- Creates visually appealing interactive heart button
+- Completeness: 100/100
