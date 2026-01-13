@@ -228,3 +228,37 @@
 - Spacing now scales flexibly based on viewport height
 - Elements distribute space evenly while maintaining proportions
 - Completeness: 100/100
+
+[2026-01-12 16:10:00] Removed All beta.thrpy.ai References
+- Removed DNS prefetch and preconnect links to beta.thrpy.ai
+- Replaced all beta.thrpy.ai URLs with thrpy.ai throughout the page
+- Updated structured data (JSON-LD):
+  * Removed beta.thrpy.ai from sameAs array
+  * Changed all /promo URLs to thrpy.ai
+  * Updated downloadUrl from beta.thrpy.ai to thrpy.ai
+- Updated HTML links:
+  * Promo text link: beta.thrpy.ai/promo → thrpy.ai
+  * Icon container link: beta.thrpy.ai → thrpy.ai
+  * Sneak peek link: beta.thrpy.ai → thrpy.ai
+- Updated text content references:
+  * FAQ answer text updated
+  * Hidden SEO content updated
+- All routing references to beta.thrpy.ai removed
+- Page now only references thrpy.ai domain
+- Completeness: 100/100
+
+[2026-01-12 16:15:00] Added External Button Links to beta.thrpy.ai
+- Changed links to beta.thrpy.ai but marked as external (not part of our site routing)
+- Added rel="external noopener noreferrer" to all beta.thrpy.ai links
+- Updated promo text link: thrpy.ai → beta.thrpy.ai/promo (external)
+- Updated icon container link: thrpy.ai → beta.thrpy.ai (external)
+- Updated sneak peek link: thrpy.ai → beta.thrpy.ai (external)
+- Added button styling to promo-text:
+  * Added padding, border-radius, and cursor pointer
+  * Added hover effect with background color and transform
+  * Added active state for button press feedback
+  * Changed display from block to inline-block for button appearance
+- Added light mode hover styles for promo-text button
+- Links to beta.thrpy.ai are now external buttons, not routed as part of our site
+- DNS prefetch/preconnect and structured data still only reference thrpy.ai
+- Completeness: 100/100

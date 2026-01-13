@@ -114,10 +114,10 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://fonts.cdnfonts.com">
-  <link rel="dns-prefetch" href="https://beta.thrpy.ai">
+  <link rel="dns-prefetch" href="https://thrpy.ai">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://beta.thrpy.ai">
+  <link rel="preconnect" href="https://thrpy.ai">
   
   <!-- Preload Critical Resources -->
   <link rel="preload" href="assets/THRPY.AI-LOGO-final2026.svg" as="image" type="image/svg+xml">
@@ -429,14 +429,24 @@
       text-decoration: none;
       margin-top: 0;
       margin-bottom: 0;
-      display: block;
-      transition: opacity 0.3s;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
       flex-shrink: 1;
+      cursor: pointer;
     }
 
     .promo-text:hover {
-      opacity: 0.8;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.7);
+      transform: translateY(-1px);
     }
+
+    .promo-text:active {
+      transform: translateY(0);
+    }
+
 
     .promo-text:focus {
       outline: 2px solid rgba(255, 255, 255, 0.5);
@@ -681,6 +691,11 @@
       color: rgba(0, 0, 0, 0.6);
     }
 
+    [data-theme="light"] .promo-text:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: rgba(0, 0, 0, 0.8);
+    }
+
     [data-theme="light"] .date-text {
       color: rgba(0, 0, 0, 0.8);
     }
@@ -768,7 +783,6 @@
       "name": "THRPY AI Team"
     },
     "sameAs": [
-      "https://beta.thrpy.ai",
       "https://thrpy.ai"
     ],
     "contactPoint": {
@@ -845,7 +859,7 @@
       "price": "0",
       "priceCurrency": "USD",
       "priceValidUntil": "2026-02-28",
-      "url": "https://beta.thrpy.ai/promo",
+      "url": "https://thrpy.ai",
       "category": "Mental Health Services",
       "eligibleRegion": {
         "@type": "Country",
@@ -941,7 +955,7 @@
       "description": "Three free months promotion - February 2026",
       "availabilityStarts": "2026-02-01",
       "availabilityEnds": "2026-02-28",
-      "url": "https://beta.thrpy.ai/promo"
+      "url": "https://thrpy.ai"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -965,7 +979,7 @@
     "softwareVersion": "1.0",
     "releaseNotes": "Three Free February promotion - Get three free months of AI therapy",
     "url": "https://thrpy.ai",
-    "downloadUrl": "https://beta.thrpy.ai"
+    "downloadUrl": "https://thrpy.ai"
   }
   </script>
   
@@ -1011,7 +1025,7 @@
         "name": "How do I get three free months?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "During February 2026, new users can get three free months of THRPY AI therapy. Simply visit beta.thrpy.ai/promo to claim your free months and start your mental health journey."
+          "text": "During February 2026, new users can get three free months of THRPY AI therapy. Simply visit thrpy.ai to claim your free months and start your mental health journey."
         }
       },
       {
@@ -1058,7 +1072,7 @@
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://beta.thrpy.ai/promo",
+      "url": "https://thrpy.ai",
       "priceValidUntil": "2026-02-28",
       "availabilityStarts": "2026-02-01",
       "availabilityEnds": "2026-02-28"
@@ -1112,18 +1126,18 @@
 
     <div class="three-free-feb" aria-label="Three Free February Promotion" role="banner">THREE FREE FEB</div>
 
-    <a href="https://beta.thrpy.ai/promo" target="_blank" rel="noopener noreferrer sponsored" class="promo-text" aria-label="Get three free months of AI therapy - February 2026 promotion" itemprop="mainEntity">
+    <a href="https://beta.thrpy.ai/promo" target="_blank" rel="external noopener noreferrer" class="promo-text" aria-label="Get three free months of AI therapy - February 2026 promotion" itemprop="mainEntity">
       Three free months await those who dare to begin
     </a>
 
     <time class="date-text" datetime="2026-02" itemprop="datePublished">February 2026</time>
 
-    <a href="https://beta.thrpy.ai" target="_blank" rel="noopener noreferrer" class="icon-container" aria-label="Visit THRPY AI - Start your mental health journey" itemprop="url">
-      <span class="sr-only">Visit THRPY AI - Access AI therapy and mental health support</span>
+    <a href="https://beta.thrpy.ai" target="_blank" rel="external noopener noreferrer" class="icon-container" aria-label="Visit THRPY AI Beta - Start your mental health journey">
+      <span class="sr-only">Visit THRPY AI Beta - Access AI therapy and mental health support</span>
       <img src="assets/thrpy-promo.png" alt="THRPY AI App Icon - Three Free Months February 2026" loading="eager" width="128" height="128" itemprop="image">
     </a>
 
-    <a href="https://beta.thrpy.ai" target="_blank" rel="noopener noreferrer" class="sneak-peak-link" aria-label="Preview THRPY AI app - See what AI therapy looks like">
+    <a href="https://beta.thrpy.ai" target="_blank" rel="external noopener noreferrer" class="sneak-peak-link" aria-label="Preview THRPY AI Beta app - See what AI therapy looks like">
       -={ sneak a peak }=-
     </a>
   </main>
@@ -1159,7 +1173,7 @@
     <p>Experience the future of mental health care with virtual counseling and digital therapy from THRPY AI. Our AI therapy app provides convenient, accessible, and effective mental health support. No need to leave your home - access professional therapy from anywhere.</p>
     
     <h2>Three Free Months Promotion - February 2026</h2>
-    <p>Special promotion: Get three free months of AI therapy this February 2026. New users can access professional mental health support at no cost. Visit beta.thrpy.ai/promo to claim your free months and begin your mental health journey with THRPY AI.</p>
+    <p>Special promotion: Get three free months of AI therapy this February 2026. New users can access professional mental health support at no cost. Visit thrpy.ai to claim your free months and begin your mental health journey with THRPY AI.</p>
     
     <h2>Mental Health Technology and AI Wellness</h2>
     <p>THRPY AI represents the cutting edge of mental health technology and AI wellness. Our platform combines advanced artificial intelligence with proven therapeutic methods to deliver effective, accessible mental health care. Experience the benefits of AI-powered therapy.</p>
