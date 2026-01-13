@@ -168,6 +168,12 @@
       opacity: 0.6;
     }
 
+    .theme-toggle:hover {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
 
     .theme-toggle:focus {
       outline: 2px solid rgba(255, 255, 255, 0.5);
@@ -185,6 +191,9 @@
       transition: all 0.3s ease;
     }
 
+    .theme-toggle:hover svg {
+      fill: rgba(255, 255, 255, 0.9);
+    }
 
     [data-theme="light"] .theme-toggle {
       background: rgba(0, 0, 0, 0.05);
@@ -195,6 +204,10 @@
       fill: rgba(0, 0, 0, 0.6);
     }
 
+    [data-theme="light"] .theme-toggle:hover {
+      background: rgba(0, 0, 0, 0.1);
+      border-color: rgba(0, 0, 0, 0.2);
+    }
 
     /* Background layers */
     .bg-base {
@@ -266,8 +279,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 0.5rem;
-      padding-bottom: 0.25rem;
+      padding-top: 1rem;
+      padding-bottom: 0.75rem;
       min-height: auto;
       position: relative;
       z-index: 10;
@@ -275,193 +288,45 @@
 
     @media (min-width: 768px) {
       .logo-container {
-        padding-top: 0.75rem;
-        padding-bottom: 0.5rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1rem;
       }
     }
 
     @media (min-width: 1024px) {
       .logo-container {
-        padding-top: 1rem;
-        padding-bottom: 0.75rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.25rem;
       }
     }
 
     .logo-container img {
-      height: 1.5rem;
+      height: 2rem;
       width: auto;
-      opacity: 0.7;
-    }
-
-    @media (min-width: 768px) {
-      .logo-container img {
-        height: 1.75rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .logo-container img {
-        height: 2rem;
-      }
-    }
-
-    .main-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      margin-bottom: 0.5rem;
-      flex-shrink: 0;
-      width: 100%;
-      padding: 50px;
-    }
-
-    .main-logo img {
-      width: 80%;
-      max-width: 300px;
-      height: auto;
       opacity: 0.9;
     }
 
-
     @media (min-width: 768px) {
-      .prominent-logo img {
-        height: clamp(3.5rem, 9vw, 6rem);
+      .logo-container img {
+        height: 2.5rem;
       }
     }
 
     @media (min-width: 1024px) {
-      .prominent-logo img {
-        height: clamp(4rem, 10vw, 7rem);
+      .logo-container img {
+        height: 3rem;
       }
     }
-
-    .blog-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      flex-shrink: 0;
-    }
-
-    .blog-link {
-      font-size: clamp(0.7rem, 1.5vw, 0.85rem);
-      color: rgba(255, 255, 255, 0.5);
-      font-family: 'Manrope', sans-serif;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-weight: 400;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-    }
-
-
-    .blog-link:focus {
-      outline: 2px solid rgba(255, 255, 255, 0.5);
-      outline-offset: 2px;
-    }
-
-    [data-theme="light"] .blog-link {
-      color: rgba(0, 0, 0, 0.6);
-    }
-
-    .early-adopter-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 1rem 0;
-      flex-shrink: 0;
-    }
-
-    .early-adopter-label {
-      font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-      color: rgba(255, 255, 255, 0.8);
-      font-family: 'Manrope', sans-serif;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .three-free-feb-banner {
-      font-size: clamp(1rem, 3vw, 1.5rem);
-      color: rgba(0, 0, 0, 0.9);
-      font-family: 'Manrope', sans-serif;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-weight: 900;
-      background: rgba(255, 255, 255, 0.95);
-      border: 2px solid rgba(255, 255, 255, 1);
-      border-radius: 0.75rem;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      margin: 0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5);
-      transition: all 0.3s ease;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .three-free-feb-banner::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 0.75rem;
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .three-free-feb-banner:hover {
-      background: rgba(255, 20, 147, 1);
-      color: rgba(255, 255, 255, 1);
-      border-color: rgba(255, 20, 147, 1);
-      box-shadow: 0 4px 30px rgba(255, 20, 147, 0.5), 0 0 0 1px rgba(255, 20, 147, 0.8);
-      transform: translateY(-2px);
-    }
-
-    .three-free-feb-banner:hover::before {
-      opacity: 1;
-    }
-
-    .three-months-free {
-      font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-      color: rgba(255, 255, 255, 0.8);
-      font-family: 'Manrope', sans-serif;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    [data-theme="light"] .early-adopter-label {
-      color: rgba(0, 0, 0, 0.8);
-    }
-
-    [data-theme="light"] .three-months-free {
-      color: rgba(0, 0, 0, 0.8);
-    }
-
 
     /* Main content */
     .main-content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: clamp(0.25rem, 1vh, 0.5rem);
+      justify-content: space-between;
+      gap: clamp(0.2rem, 1.5vh, 0.75rem);
       padding: 0.25rem 1rem;
-      padding-top: 0rem;
+      padding-top: 0.25rem;
       margin-top: 0;
       text-align: center;
       max-width: 42rem;
@@ -472,17 +337,17 @@
 
     @media (min-width: 768px) {
       .main-content {
-        padding-top: 0rem;
+        padding-top: 0.5rem;
         margin-top: 0;
-        gap: clamp(0.3rem, 1.5vh, 0.6rem);
+        gap: clamp(0.3rem, 2vh, 0.9rem);
       }
     }
 
     @media (min-width: 1024px) {
       .main-content {
-        padding-top: 0rem;
+        padding-top: 0.75rem;
         margin-top: 0;
-        gap: clamp(0.4rem, 2vh, 0.75rem);
+        gap: clamp(0.4rem, 2.5vh, 1rem);
       }
     }
 
@@ -493,12 +358,12 @@
       color: rgba(255, 255, 255, 0.6);
       font-family: 'Academy Engraved LET', 'Playfair Display', serif;
       letter-spacing: -0.02em;
-      line-height: 0.75;
+      line-height: 0.8;
       font-weight: 400;
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
       animation: fade-in-slow 2s ease-out;
       margin: 0;
-      flex-shrink: 0;
+      flex-shrink: 1;
       text-align: center;
       padding: 0 1rem;
     }
@@ -512,19 +377,20 @@
       font-weight: 400;
       margin-bottom: 0;
       margin-top: 0;
-      line-height: 1.2;
+      line-height: 1.4;
       flex-shrink: 0;
     }
 
     .what-is-text {
-      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-size: clamp(0.75rem, 2vw, 1rem);
       color: rgba(255, 255, 255, 0.8);
       font-family: 'Manrope', sans-serif;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       font-weight: 600;
-      margin: 0;
-      line-height: 1.2;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
       flex-shrink: 0;
     }
 
@@ -535,9 +401,9 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 0;
-      line-height: 1.1;
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
       flex-shrink: 0;
     }
 
@@ -548,9 +414,9 @@
       letter-spacing: 0.1em;
       text-transform: lowercase;
       font-weight: 400;
-      margin-top: 0;
-      margin-bottom: 0;
-      line-height: 1.2;
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
       flex-shrink: 0;
     }
 
@@ -568,7 +434,7 @@
 
     .pre-coupon-text .valentines-text {
       display: block;
-      margin-top: 0;
+      margin-top: 0.1rem;
       font-size: 0.9em;
       text-transform: lowercase;
       letter-spacing: 0.05em;
@@ -581,8 +447,9 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
-      margin: 0;
-      line-height: 1.1;
+      margin-top: 0.25rem;
+      margin-bottom: 0.15rem;
+      line-height: 1.3;
       flex-shrink: 0;
     }
 
@@ -613,13 +480,20 @@
       border: 2px dotted rgba(255, 255, 255, 0.6);
       border-radius: 4px;
       display: inline-block;
-      padding: 0.15rem 0.5rem;
-      margin: 0;
+      padding: 0.3rem 0.75rem;
+      margin-top: 0;
+      margin-bottom: 0;
       flex-shrink: 0;
       transition: all 0.3s ease;
       cursor: pointer;
     }
 
+    .three-free-feb:hover {
+      background-color: rgba(255, 20, 147, 0.3);
+      color: rgba(255, 20, 147, 1);
+      border-color: rgba(255, 20, 147, 0.8);
+      box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    }
 
     @media (min-width: 768px) {
       .three-free-feb {
@@ -632,17 +506,23 @@
       color: rgba(255, 255, 255, 0.5);
       font-family: 'Manrope', sans-serif;
       letter-spacing: 0.05em;
-      line-height: 1.2;
+      line-height: 1.4;
       text-decoration: none;
-      margin: 0;
+      margin-top: 0;
+      margin-bottom: 0;
       display: inline-block;
-      padding: 0.2rem 0.5rem;
+      padding: 0.4rem 0.875rem;
       border-radius: 0.5rem;
       transition: all 0.3s;
       flex-shrink: 1;
       cursor: pointer;
     }
 
+    .promo-text:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.7);
+      transform: translateY(-1px);
+    }
 
     .promo-text:active {
       transform: translateY(0);
@@ -684,7 +564,7 @@
 
     .date-text .deadline {
       display: block;
-      margin-top: 0;
+      margin-top: 0.15rem;
       font-size: 0.85em;
       color: rgba(255, 20, 147, 0.9);
       font-weight: 600;
@@ -712,6 +592,9 @@
       position: relative;
     }
 
+    .icon-container:hover {
+      opacity: 0.9;
+    }
 
     .icon-container .heart-hover {
       position: absolute;
@@ -740,6 +623,9 @@
       }
     }
 
+    .icon-container:hover .heart-hover {
+      opacity: 1;
+    }
 
     .icon-container .heart-hover .heart-icon {
       width: 100%;
@@ -795,6 +681,10 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .icon-container:hover img {
+      transform: scale(1.15);
+      box-shadow: 0 25px 80px rgba(204, 123, 248, 0.5), 0 0 50px rgba(204, 123, 248, 0.3);
+    }
 
     @media (min-width: 768px) {
       .icon-container img {
@@ -815,7 +705,7 @@
     .sneak-peak-link {
       font-size: 0.7rem;
       font-weight: 300;
-      margin-top: 0;
+      margin-top: 0.15rem;
       display: block;
       color: rgba(255, 255, 255, 0.4);
       font-family: 'Manrope', sans-serif;
@@ -823,73 +713,11 @@
       text-transform: lowercase;
       text-decoration: none;
       transition: opacity 0.3s;
-      flex-shrink: 0;
     }
 
-    .cta-button {
-      font-size: clamp(0.875rem, 2vw, 1.125rem);
-      color: rgba(255, 255, 255, 0.9);
-      font-family: 'Manrope', sans-serif;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-weight: 700;
-      background: rgba(255, 20, 147, 0.3);
-      border: 2px solid rgba(255, 20, 147, 0.8);
-      border-radius: 0.5rem;
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      margin: 0;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      flex-shrink: 0;
-      cursor: pointer;
-      box-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
+    .sneak-peak-link:hover {
+      opacity: 0.7;
     }
-
-
-    .cta-button:active {
-      transform: translateY(0);
-    }
-
-    .cta-button:focus {
-      outline: 2px solid rgba(255, 255, 255, 0.5);
-      outline-offset: 4px;
-    }
-
-    [data-theme="light"] .cta-button {
-      background: rgba(255, 20, 147, 0.25);
-      border-color: rgba(255, 20, 147, 0.9);
-      color: rgba(0, 0, 0, 0.9);
-    }
-
-
-    .learn-more-link {
-      font-size: clamp(0.75rem, 1.5vw, 0.9rem);
-      color: rgba(255, 255, 255, 0.6);
-      font-family: 'Manrope', sans-serif;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 400;
-      text-decoration: none;
-      margin: 0;
-      margin-top: 0.5rem;
-      display: block;
-      transition: all 0.3s ease;
-      flex-shrink: 0;
-    }
-
-
-    .learn-more-link:focus {
-      outline: 2px solid rgba(255, 255, 255, 0.5);
-      outline-offset: 2px;
-      border-radius: 2px;
-    }
-
-    [data-theme="light"] .learn-more-link {
-      color: rgba(0, 0, 0, 0.6);
-    }
-
-
 
     .sneak-peak-link:focus {
       outline: 2px solid rgba(255, 255, 255, 0.5);
@@ -1055,6 +883,10 @@
       color: rgba(0, 0, 0, 0.6);
     }
 
+    [data-theme="light"] .promo-text:hover {
+      background-color: rgba(255, 192, 203, 0.3);
+      color: rgba(0, 0, 0, 0.9);
+    }
 
     [data-theme="light"] .date-text {
       color: rgba(0, 0, 0, 0.8);
@@ -1081,6 +913,12 @@
       border-color: rgba(0, 0, 0, 0.6);
     }
 
+    [data-theme="light"] .three-free-feb:hover {
+      background-color: rgba(255, 20, 147, 0.25);
+      color: rgba(255, 20, 147, 1);
+      border-color: rgba(255, 20, 147, 0.8);
+      box-shadow: 0 0 20px rgba(255, 20, 147, 0.4);
+    }
 
     [data-theme="light"] .sneak-peak-link {
       color: rgba(0, 0, 0, 0.5);
@@ -1483,41 +1321,38 @@
   <!-- Hearts and Sparkles -->
   <div class="bg-hearts-sparkles" id="hearts-sparkles-container"></div>
 
+  <!-- Logo -->
+  <header class="logo-container" role="banner" itemscope itemtype="https://schema.org/Organization">
+    <img src="assets/THRPY.AI-LOGO-final2026.svg" alt="THRPY AI Logo - AI Therapist Platform" itemprop="logo" loading="eager" width="200" height="80">
+  </header>
+
   <!-- Main Content -->
   <main id="main-content" class="main-content" role="main" itemscope itemtype="https://schema.org/WebPage">
-    <div class="main-logo" itemscope itemtype="https://schema.org/Organization">
-      <img src="assets/THRPY.AI-LOGO-final2026.svg" alt="THRPY AI Logo - AI Therapist Platform" itemprop="logo" loading="eager">
-    </div>
     <h1 itemprop="headline">LOVE YOURSELF</h1>
 
-    <div class="what-is-text">AI POWERED MENTAL HEALTH CARE</div>
+    <div class="what-is-text">AI-Powered Mental Health Support</div>
 
-    <div class="teaser-text">FEBRUARY 2026</div>
+    <div class="new-interesting-text">NEW • INTERESTING • COMING FEBRUARY</div>
 
-    <div class="early-adopter-section">
-      <div class="early-adopter-label">Early Adopter Special</div>
-      <div class="three-free-feb-banner">THREE FREE FEB</div>
-      <div class="three-months-free">Three Months FREE</div>
+    <div class="teaser-text">Early Adopter Access Available Now</div>
+
+    <div class="pre-coupon-text">
+      Launching February 2026
+      <span class="valentines-text">get in early</span>
     </div>
-
-    <a href="https://beta.thrpy.ai" target="_blank" rel="external noopener noreferrer" class="cta-button" aria-label="Sign up now for THRPY AI">
-      SIGN UP NOW
-    </a>
 
     <a href="https://beta.thrpy.ai" target="_blank" rel="external noopener noreferrer" class="icon-container" aria-label="Visit THRPY AI Beta - Start your mental health journey">
       <span class="sr-only">Visit THRPY AI Beta - Access AI therapy and mental health support</span>
-      <img src="assets/thrpy-promo.svg" alt="THRPY AI App Icon - AI Powered Mental Health Care" loading="eager" width="128" height="128" itemprop="image">
+      <img src="assets/thrpy-promo.svg" alt="THRPY AI App Icon - AI-Powered Mental Health Support" loading="eager" width="128" height="128" itemprop="image">
       <div class="heart-hover" aria-hidden="true">
         <img src="assets/furple-heart.svg" alt="" class="heart-icon">
         <span class="eatme-text">eat me</span>
       </div>
     </a>
 
-    <div class="blog-links">
-      <a href="https://blog.thrpy.ai/launch" target="_blank" rel="external noopener noreferrer" class="blog-link" aria-label="Read about THRPY AI Launch">
-        Launch Announcement
-      </a>
-    </div>
+    <a href="https://beta.thrpy.ai" target="_blank" rel="external noopener noreferrer" class="sneak-peak-link" aria-label="Preview THRPY AI Beta app - See what AI therapy looks like">
+      -={ sneak a peak }=-
+    </a>
   </main>
   
   <!-- Hidden SEO Content - Comprehensive -->
@@ -1721,7 +1556,7 @@
       heart.style.cssText = `
         left: ${Math.random() * 100}%;
         bottom: ${startPosition}px;
-        animation-delay: 0s;
+        animation-delay: ${Math.random() * 0.2}s;
         animation-duration: ${25 + Math.random() * 15}s;
         width: ${30 + Math.random() * 50}px;
         height: auto;
